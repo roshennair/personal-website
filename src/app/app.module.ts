@@ -12,6 +12,7 @@ import { ProjectFilterComponent } from './projects/project-filter/project-filter
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { ContactCardComponent } from './contact/contact-card/contact-card.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
     ProjectFilterComponent,
     ProjectCardComponent,
     ContactCardComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
