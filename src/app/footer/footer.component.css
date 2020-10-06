@@ -1,0 +1,35 @@
+:host {
+	display: block;
+}
+
+footer {
+	width: 100vw;
+	background: var(--dark-blue);
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	display: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+span {
+	color: var(--white);
+}
+
+@media (min-width: 1080px) {
+	footer {
+		justify-content: space-between;
+		padding: 0 140px;
+	}
+
+	a {
+		display: inline;
+	}
+}
