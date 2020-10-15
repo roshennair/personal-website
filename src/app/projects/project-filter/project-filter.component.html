@@ -1,1 +1,17 @@
-<p>project-filter works!</p>
+<div class="filter-container">
+	<fieldset id="filter-group">
+		<legend>Filters:</legend>
+		<select name="category" id="category">
+			<option value="" disabled>Category</option>
+			<option value="web">Web</option>
+			<option value="mobile">Mobile</option>
+			<option value="desktop">Desktop</option>
+		</select>
+		<select name="status" id="status">
+			<option value="" disabled>Status</option>
+			<option value="ongoing">Ongoing</option>
+			<option value="completed">Completed</option>
+		</select>
+	</fieldset>
+	<button class="btn btn-primary">Clear All Filters</button>
+</div>

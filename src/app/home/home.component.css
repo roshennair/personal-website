@@ -1,5 +1,6 @@
 #hero {
-	height: 100%;
+	height: 100vh;
+	min-height: 740px;
 }
 
 #title {
@@ -12,6 +13,10 @@
 }
 
 @media (min-width: 900px) {
+	#hero {
+		min-height: 600px;
+	}
+
 	#buttons {
 		flex-direction: row;
 	}
