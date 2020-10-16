@@ -36,13 +36,7 @@
 
 @media (min-width: 700px) {
 	#projects-container {
-		padding: 50px 0;
+		/* padding: 50px 0; */
 		gap: 40px;
-	}
-}
-
-@media (min-width: 1000px) {
-	#projects-container {
-		padding: 85px 0;
 	}
 }

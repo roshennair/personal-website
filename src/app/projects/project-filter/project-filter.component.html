@@ -1,17 +1,20 @@
-<div class="filter-container">
-	<fieldset id="filter-group">
-		<legend>Filters:</legend>
-		<select name="category" id="category">
-			<option value="" disabled>Category</option>
-			<option value="web">Web</option>
-			<option value="mobile">Mobile</option>
-			<option value="desktop">Desktop</option>
-		</select>
-		<select name="status" id="status">
-			<option value="" disabled>Status</option>
-			<option value="ongoing">Ongoing</option>
-			<option value="completed">Completed</option>
-		</select>
-	</fieldset>
+<form>
+	<div id="filter-container">
+		<span>Filters:</span>
+		<div id="filter-inputs">
+			<select class="input" name="category" id="category">
+				<option value disabled selected>Category</option>
+				<option value="web">Web</option>
+				<option value="mobile">Mobile</option>
+				<option value="desktop">Desktop</option>
+			</select>
+			<select class="input" name="status" id="status">
+				<option value disabled selected>Status</option>
+				<option value="ongoing">Ongoing</option>
+				<option value="completed">Completed</option>
+			</select>
+		</div>
+	</div>
 	<button class="btn btn-primary">Clear All Filters</button>
-</div>
+</form>
+<hr>
