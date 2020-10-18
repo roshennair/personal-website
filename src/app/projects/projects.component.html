@@ -3,10 +3,10 @@
 	<p class="subtitle">Here are all of the software projects I'm currently working on or have worked on in the past.
 	</p>
 </section>
-<section id="projects-container">
+<section id="projects-showcase">
 	<app-project-filter></app-project-filter>
 	<div id="projects-grid">
-		<app-project-card *ngFor="let project of projects"></app-project-card>
+		<app-project-card class="card" *ngFor="let project of projects"></app-project-card>
 	</div>
 </section>
 <section id="contact" class="hero">

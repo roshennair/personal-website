@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-contact-card',
-  templateUrl: './contact-card.component.html',
-  styleUrls: ['./contact-card.component.css']
+	selector: 'app-contact-card',
+	templateUrl: './contact-card.component.html',
+	styleUrls: ['./contact-card.component.css']
 })
-export class ContactCardComponent implements OnInit {
+export class ContactCardComponent {
+	@Input() logoPath: string;
+	@Input() instruction: string;
+	@Input() info: string;
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit(): void {
-  }
-
+	get altString(): string {
+		return `${this.instruction} logo`;
+	}
 }

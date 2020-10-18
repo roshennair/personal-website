@@ -1,7 +1,10 @@
 :root {
 	--dark-blue: #0D1321;
-	--white: #F7F7FF;
-	--red: #FF5666;
+	--click-dark-blue: hsl(222, 43%, 15%);
+	--white: #f5f5ff;
+	--click-white: #e0e0ff;
+	--red: #ff5666;
+	--click-red: #ff3347;
 	--light-blue: #227DFC;
 	--light-green: #8DF7E2;
 	--light-grey: #A5A5A5;
@@ -14,10 +17,20 @@
 	margin: 0;
 	padding: 0;
 	font-family: var(--font);
+	color: var(--dark-blue);
 }
 
 body {
 	background-color: var(--white);
+}
+
+option {
+	font-weight: 500;
+	color: var(--dark-grey);
+}
+
+option:disabled {
+	color: var(--light-grey);
 }
 
 .hero {
@@ -32,7 +45,7 @@ body {
 .title {
 	font-size: 50px;
 	line-height: 1.4;
-	margin: 40px 0;
+	margin: 40px 0 30px 0;
 	color: var(--red);
 	text-align: center;
 	padding: 30px 36px 0 36px;
@@ -50,7 +63,15 @@ body {
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	padding: 20px 50px
+	padding: 20px 50px;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn:active, .btn:focus {
+	outline: none;
 }
 
 .btn-primary {
@@ -58,9 +79,26 @@ body {
 	color: var(--white);
 }
 
+.btn-primary:active {
+	background-color: var(--click-red);
+}
+
 .btn-secondary {
 	background-color: var(--white);
 	color: var(--dark-blue);
+}
+
+.btn-secondary:active {
+	background-color: var(--click-white);
+}
+
+.btn-tertiary {
+	background-color: var(--dark-blue);
+	color: var(--white);
+}
+
+.btn-tertiary:active {
+	background-color: var(--click-dark-blue);
 }
 
 .ellipsis {
@@ -74,8 +112,11 @@ body {
 	border: 1px solid var(--light-grey);
 	font-size: 16px;
 	font-weight: 500;
-	color: var(--dark-grey);
 	border-radius: 4px;
+}
+
+.input::placeholder {
+	color: var(--dark-grey);
 }
 
 .input:focus {
@@ -83,13 +124,18 @@ body {
 	border-color: black;
 }
 
-option {
-	font-weight: 500;
-	color: var(--dark-grey);
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white);
+	box-shadow: 0 8px 20px 0 rgba(45, 45, 45, 0.2);
+	border-radius: 20px;
+	overflow: hidden;
+	transition: all 0.3s ease 0s;
 }
 
-option:disabled {
-	color: var(--light-grey);
+.card:hover {
+	transform: scale(1.01);
 }
 
 @media (min-width: 900px) {
