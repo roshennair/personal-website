@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "roshen-nair": {
+      "hosting": {
+        "personal-website": [
+          "roshen-nair"
+        ]
+      }
+    }
+  }
+}
