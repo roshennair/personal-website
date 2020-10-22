@@ -25,10 +25,6 @@ header {
 	display: none;
 }
 
-.disabled {
-	pointer-events: none;
-}
-
 @media (min-width: 900px) {
 	header {
 		height: 80px;
@@ -51,10 +47,5 @@ header {
 	#nav-bar li {
 		display: inline;
 		padding: 0 15px;
-	}
-
-	.nav-link {
-		color: var(--white);
-		text-decoration: none;
 	}
 }

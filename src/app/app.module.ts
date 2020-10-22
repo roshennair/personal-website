@@ -13,6 +13,7 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
 import { ContactCardComponent } from './contact/contact-card/contact-card.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProjectCardComponent,
     ContactCardComponent,
     ContactFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BottomNavbarComponent
   ],
   imports: [
     BrowserModule,

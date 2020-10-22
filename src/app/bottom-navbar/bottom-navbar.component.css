@@ -1,0 +1,41 @@
+:host {
+	height: 60px;
+	width: 100%;
+	background-color: var(--dark-blue);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav-link-container:hover, .nav-link-container:focus {
+	background-color: var(--click-dark-blue);
+}
+
+a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+}
+
+img {
+	height: 24px;
+}
+
+@media (min-width: 500px) {
+	.nav-link-container {
+		width: 70px;
+	}
+}
+
+@media (min-width: 900px) {
+	:host {
+		display: none;
+	}
+}

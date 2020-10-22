@@ -1,3 +1,8 @@
+:host {
+	display: block;
+	padding-bottom: 60px;
+}
+
 footer {
 	height: 40px;
 	width: 100%;
@@ -16,6 +21,10 @@ footer {
 }
 
 @media (min-width: 900px) {
+	:host {
+		padding-bottom: 0;
+	}
+
 	footer {
 		justify-content: flex-end;
 		padding: 0 10%;
