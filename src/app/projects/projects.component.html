@@ -6,7 +6,10 @@
 <section id="projects-showcase">
 	<app-project-filter></app-project-filter>
 	<div id="projects-grid">
-		<app-project-card class="card" *ngFor="let project of projects"></app-project-card>
+		<app-project-card class="card" *ngFor="let project of projects | async" [categories]="project.categories"
+			[description]="project.description" [image]="project.image" [name]="project.name"
+			[repository]="project.repository" [status]="project.status">
+		</app-project-card>
 	</div>
 </section>
 <section id="contact" class="hero">

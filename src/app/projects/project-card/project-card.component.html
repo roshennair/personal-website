@@ -1,13 +1,11 @@
-<div class="project-graphic">
-	<span class="project-name ellipsis">Card Title</span>
-	<span class="project-status tag">Ongoing</span>
+<div class="project-graphic" [ngStyle]="{ 'background-image': 'url(' + image + ')'}">
+	<span class="project-name ellipsis">{{ name }}</span>
+	<span class="project-status tag">{{ status }}</span>
 </div>
 <div class="project-content">
 	<div class="project-categories">
-		<span class="project-category tag">Category</span>
-		<span class="project-category tag">Category</span>
+		<span *ngFor="let category of categories" class="project-category tag">{{ category }}</span>
 	</div>
-	<div class="project-description ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, libero...
-	</div>
-	<button class="btn btn-tertiary learn-more">Learn more</button>
+	<div class="project-description ellipsis">{{ description }}</div>
+	<a class="btn btn-tertiary learn-more" [href]="repository" target="_blank">Learn more</a>
 </div>

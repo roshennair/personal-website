@@ -36,7 +36,12 @@
 
 @media (min-width: 700px) {
 	#projects-showcase {
-		/* padding: 50px 0; */
 		gap: 40px;
+	}
+}
+
+@media (min-width: 1000px) {
+	#projects-showcase {
+		min-height: 580px;
 	}
 }
