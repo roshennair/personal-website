@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'app-contact',
@@ -6,22 +8,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-	contacts: { logoPath: string, instruction: string, info: string }[] = [
-		{
-			logoPath: '/assets/svg/phone.svg',
-			instruction: 'Call me',
-			info: '+601155018109'
-		},
-		{
-			logoPath: '/assets/svg/mail.svg',
-			instruction: 'Email me',
-			info: 'roshen620@gmail.com'
-		}
-	]
+	contacts: Observable<any[]>;
 
-	constructor() { }
+	constructor(private firestore: AngularFirestore) { }
 
 	ngOnInit(): void {
+		this.contacts = this.firestore.collection('contacts').valueChanges();
 	}
 
 }

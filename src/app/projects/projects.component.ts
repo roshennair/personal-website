@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -7,13 +7,12 @@ import { Observable } from 'rxjs';
 	templateUrl: './projects.component.html',
 	styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements AfterViewInit {
+export class ProjectsComponent implements OnInit {
 	projects: Observable<any[]>;
-	// projects = Array(1);
 
 	constructor(private firestore: AngularFirestore) { }
 
-	ngAfterViewInit() {
+	ngOnInit(): void {
 		this.projects = this.firestore.collection('projects').valueChanges();
 	}
 }
