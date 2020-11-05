@@ -1,5 +1,5 @@
 <span id="instruction">Submit a contact form*</span>
-<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit()">
+<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit($event)">
 	<div class="input-group">
 		<label for="name">Name:</label>
 		<input id="name" class="input" name="name" type="text" placeholder="John Doe" required [(ngModel)]="model.name"
@@ -24,5 +24,6 @@
 			A message is required
 		</div>
 	</div>
-	<button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit contact form</button>
+	<button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit
+		contact form</button>
 </form>

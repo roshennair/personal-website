@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AngularFireFunctions } from '@angular/fire/functions';
 import { ContactFormModel } from './contact-form-model';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
 	selector: 'app-contact-form',
@@ -8,12 +8,23 @@ import { ContactFormModel } from './contact-form-model';
 	styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
-	model = new ContactFormModel('', '', '');
+	model: ContactFormModel = {
+		name: '',
+		email: '',
+		message: ''
+	};
 	submitted = false;
 
-	constructor() { }
+	constructor(private firestore: AngularFirestore) { }
 
-	onSubmit(): void {
+	async onSubmit(event: Event) {
+		event.preventDefault();
 		this.submitted = true;
+		try {
+			await this.firestore.collection('contact-form-submissions').add(this.model);
+			console.log('New contact form submitted!');
+		} catch (err) {
+			console.log(err);
+		}
 	}
 }
