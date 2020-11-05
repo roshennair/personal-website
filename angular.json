@@ -15,7 +15,8 @@
 					"options": {
 						"allowedCommonJsDependencies": [
 							"@angular/fire/firestore",
-							"@firebase/auth"
+							"@firebase/auth",
+							"@firebase/functions"
 						],
 						"outputPath": "dist/personal-website",
 						"index": "src/index.html",
