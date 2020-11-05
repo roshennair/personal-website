@@ -45,7 +45,7 @@ import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAnalyticsModule,
 		AngularFirestoreModule,
-		AngularFireFunctionsModule
+		AngularFireFunctionsModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
