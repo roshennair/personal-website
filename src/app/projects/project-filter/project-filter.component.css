@@ -1,4 +1,7 @@
 :host {
+	/* Temporary */
+	filter: blur(3px);
+	/* Temporary */
 	grid-column: 2 / span 6;
 	display: flex;
 	flex-direction: column;
@@ -9,6 +12,12 @@ form {
 	display: flex;
 	flex-direction: column;
 }
+
+/* Temporary */
+#filter-container, button {
+	pointer-events: none;
+}
+/* Temporary */
 
 #filter-container {
 	display: flex;

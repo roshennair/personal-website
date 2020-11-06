@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import tippy from 'tippy.js';
-import 'tippy.js/themes/light.css';
 
 @Component({
 	selector: 'app-header',
@@ -11,9 +10,10 @@ export class HeaderComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		tippy('[data-tippy]', {
+		tippy('[data-tippy-light]', {
 			content: 'Coming soon',
-			theme: 'roshennair'
+			placement: 'bottom',
+			theme: 'light'
 		})
 	}
 }
