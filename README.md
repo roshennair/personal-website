@@ -6,7 +6,7 @@ My personal website and software engineering portfolio, built using the followin
 - NPM (Package manager)
 - Git (Version control system)
 - Angular (Frontend framework)
-- Firebase (Backend-as-a-Service):
+- Firebase (Backend-as-a-Service): 
 	- Cloud Firestore
 	- Storage
 	- Hosting
