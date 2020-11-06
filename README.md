@@ -16,6 +16,9 @@ The website is currently accessible via the following 2 domains:
 - https://roshen-nair.firebaseapp.com/
 
 ## Future TODOs:
-- Improve performance, especially loading latency, cold start time
-- Optimize static assets for delivery i.e. images, text
-- Utilize Cloud Functions to automate background tasks e.g. automatic email updates
+- [ ] Improve performance, especially loading latency, cold start time
+- [ ] Optimize static assets for delivery i.e. images, text
+- [ ] Utilize Cloud Functions to automate background tasks e.g. automatic email updates
+- [ ] Improve interactivity of contact form
+- [ ] Implement Blog page
+- [ ] Implement About page
