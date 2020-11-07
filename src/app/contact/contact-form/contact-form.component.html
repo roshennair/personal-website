@@ -1,10 +1,10 @@
 <span id="instruction">Submit a contact form*</span>
-<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit($event)">
+<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit($event); contactForm.reset()">
 	<div class="input-group">
 		<label for="name">Name:</label>
 		<input id="name" class="input" name="name" type="text" placeholder="John Doe" required [(ngModel)]="model.name"
 			#name="ngModel">
-		<div [hidden]="name.valid || (name.untouched && name.pristine)" class="form-alert">
+		<div [hidden]="name.valid || (name.untouched && name.pristine)" class="form-message form-error">
 			Your name is required
 		</div>
 	</div>
@@ -12,7 +12,7 @@
 		<label for="email">Email address:</label>
 		<input id="email" class="input" name="email" type="email" placeholder="johndoe@email.com" required
 			[(ngModel)]="model.email" #email="ngModel">
-		<div [hidden]="email.valid || (email.untouched && email.pristine)" class="form-alert">
+		<div [hidden]="email.valid || (email.untouched && email.pristine)" class="form-message form-error">
 			Your email is required
 		</div>
 	</div>
@@ -20,10 +20,15 @@
 		<label for="message">Your message:</label>
 		<textarea class="input" name="message" id="message" cols="30" rows="10" placeholder="Here is my message..."
 			required [(ngModel)]="model.message" #message="ngModel"></textarea>
-		<div [hidden]="message.valid || (message.untouched && message.pristine)" class="form-alert">
+		<div [hidden]="message.valid || (message.untouched && message.pristine)" class="form-message form-error">
 			A message is required
 		</div>
 	</div>
 	<button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit
 		contact form</button>
+	<div *ngIf="submitted" class="form-message form-success">
+		<span>Thank you! Your message was successfully sent.</span>
+		<img id="hideSuccess" src="/assets/svg/x-circle.svg" alt="Hide success message"
+			(click)="submitted = !submitted">
+	</div>
 </form>
