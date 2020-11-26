@@ -1,6 +1,7 @@
 :host {
 	/* Temporary */
-	filter: blur(3px);
+	-webkit-filter: blur(3px);
+	        filter: blur(3px);
 	/* Temporary */
 	grid-column: 2 / span 6;
 	display: flex;

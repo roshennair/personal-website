@@ -127,6 +127,22 @@ option:disabled {
 	border-radius: 4px;
 }
 
+.input::-webkit-input-placeholder {
+	color: var(--dark-grey);
+}
+
+.input::-moz-placeholder {
+	color: var(--dark-grey);
+}
+
+.input:-ms-input-placeholder {
+	color: var(--dark-grey);
+}
+
+.input::-ms-input-placeholder {
+	color: var(--dark-grey);
+}
+
 .input::placeholder {
 	color: var(--dark-grey);
 }
