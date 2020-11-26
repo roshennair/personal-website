@@ -1,30 +1,29 @@
 <span id="instruction">Submit a contact form*</span>
-<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit($event); contactForm.reset()">
+<form #contactForm="ngForm" id="contact-form" (ngSubmit)="onSubmit()">
 	<div class="input-group">
 		<label for="name">Name:</label>
-		<input id="name" class="input" name="name" type="text" placeholder="John Doe" required [(ngModel)]="model.name"
-			#name="ngModel">
-		<div [hidden]="name.valid || (name.untouched && name.pristine)" class="form-message form-error">
-			Your name is required
+		<input id="name" class="input" name="name" type="text" placeholder="John Doe" required ngModel #name="ngModel">
+		<div *ngIf="name.touched && name.invalid" class="form-message form-error">
+			Please enter your name.
 		</div>
 	</div>
 	<div class="input-group">
 		<label for="email">Email address:</label>
-		<input id="email" class="input" name="email" type="email" placeholder="johndoe@email.com" required
-			[(ngModel)]="model.email" #email="ngModel">
-		<div [hidden]="email.valid || (email.untouched && email.pristine)" class="form-message form-error">
-			Your email is required
+		<input id="email" class="input" name="email" type="email" placeholder="johndoe@email.com" required email ngModel
+			#email="ngModel">
+		<div *ngIf="email.touched && email.invalid" class="form-message form-error">
+			Please enter a valid email.
 		</div>
 	</div>
 	<div class="input-group">
 		<label for="message">Your message:</label>
 		<textarea class="input" name="message" id="message" cols="30" rows="10" placeholder="Here is my message..."
-			required [(ngModel)]="model.message" #message="ngModel"></textarea>
-		<div [hidden]="message.valid || (message.untouched && message.pristine)" class="form-message form-error">
-			A message is required
+			required ngModel #message="ngModel"></textarea>
+		<div *ngIf="message.touched && message.invalid" class="form-message form-error">
+			Please enter a message.
 		</div>
 	</div>
-	<button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit
+	<button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid || submitted">Submit
 		contact form</button>
 	<div *ngIf="submitted" class="form-message form-success">
 		<span>Thank you! Your message was successfully sent.</span>
