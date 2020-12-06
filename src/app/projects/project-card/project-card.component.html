@@ -1,6 +1,6 @@
 <div class="project-graphic" [ngStyle]="{ 'background-image': 'url(' + image + ')'}">
 	<span class="project-name ellipsis">{{ name }}</span>
-	<span class="project-status tag">{{ status }}</span>
+	<span #statusEl class="project-status tag">{{ status }}</span>
 </div>
 <div class="project-content">
 	<div class="project-categories">

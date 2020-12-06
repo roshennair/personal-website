@@ -32,7 +32,14 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
+}
+
+.project-status.ongoing {
 	background-color: var(--red);
+}
+
+.project-status.completed {
+	background-color: var(--dark-blue);
 }
 
 .project-content {
