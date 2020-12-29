@@ -17,7 +17,7 @@ The website is currently accessible via the following 2 domains:
 
 ## Future TODOs:
 - [x] Reset contact form upon submission
-- [ ] Improve contact form validation
+- [x] Improve contact form validation
 - [ ] Add CAPTCHA to contact form
 - [ ] Improve performance, especially loading latency, cold start time
 - [ ] Optimize static assets for delivery i.e. images, text
