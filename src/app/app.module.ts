@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 // Components
 import { AppComponent } from './app.component';
@@ -45,7 +44,6 @@ import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAnalyticsModule,
 		AngularFirestoreModule,
-		AngularFireFunctionsModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
