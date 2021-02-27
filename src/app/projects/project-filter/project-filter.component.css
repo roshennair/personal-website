@@ -52,12 +52,6 @@ hr {
 	border: 0.5px solid var(--light-grey);
 }
 
-@media (min-width: 500px) {
-	:host {
-		grid-column: 2 / span 12;
-	}
-}
-
 @media (min-width: 767px) {
 	form {
 		flex-direction: row;

@@ -21,27 +21,19 @@
 	margin: 0 0 20px 0;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
 	#projects-showcase {
-		grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-		gap: 20px;
+		gap: 40px;
+	}
+}
+
+@media (min-width: 1300px) {
+	#projects-showcase {
+		min-height: 580px;
+		grid-template-columns: 1fr repeat(6, 1fr) 1fr;
 	}
 
 	#projects-grid {
-		grid-column: 2 / span 12;
-		grid-template-columns: repeat(12, minmax(auto, 60px));
-		gap: 40px;
-	}
-}
-
-@media (min-width: 700px) {
-	#projects-showcase {
-		gap: 40px;
-	}
-}
-
-@media (min-width: 1000px) {
-	#projects-showcase {
-		min-height: 580px;
+		grid-template-columns: repeat(6, 1fr);
 	}
 }
