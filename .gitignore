@@ -47,3 +47,6 @@ Thumbs.db
 
 # Firebase
 /.firebase
+
+# Custom
+todos.md
