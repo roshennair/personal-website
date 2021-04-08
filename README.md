@@ -6,11 +6,10 @@ My personal website and software engineering portfolio, built using the followin
 - NPM (Package manager)
 - Git (Version control system)
 - Angular (Frontend framework)
-- Firebase (Backend-as-a-Service): 
+- Firebase (Backend-as-a-Service):
 	- Cloud Firestore
 	- Storage
 	- Hosting
+- Google Domains (DNS & SSL certification)
 
-The website is currently accessible via the following 2 domains:
-- https://roshen-nair.web.app/
-- https://roshen-nair.firebaseapp.com/
+> The website is [live](roshennair.com)!
