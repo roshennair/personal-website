@@ -35,7 +35,7 @@ import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 		ContactCardComponent,
 		ContactFormComponent,
 		NotFoundComponent,
-		BottomNavbarComponent
+		BottomNavbarComponent,
 	],
 	imports: [
 		BrowserModule,
