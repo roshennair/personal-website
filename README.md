@@ -12,4 +12,4 @@ My personal website and software engineering portfolio, built using the followin
 	- Hosting
 - Google Domains (DNS & SSL certification)
 
-> The website is [live](roshennair.com)!
+> The website is [live](https://roshennair.com)!
